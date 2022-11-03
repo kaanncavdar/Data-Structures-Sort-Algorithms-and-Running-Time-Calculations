@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1667497357 source:c:\users\casper\desktop\projeler\data_structures_homework\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
