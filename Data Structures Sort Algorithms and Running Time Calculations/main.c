@@ -43,40 +43,56 @@ int main()
     printf("\nChoose the sorting algorithm from the list below to compute the running time in seconds:\n");
     printf("1-Insertion sort\n2-Selection sort\n3-Bubble sort\n4-Mergesort\n5-Quicksort\n6-Heap sort\n");
     scanf("%d",&chose);
-    do
+    while(1)
     {
         if(chose==1)
         {
             start_t = clock();
             Insertion_sort(arr,arr_size);
+            end_t = clock();
+            break;
         }
-        if(chose==2)
+        else if(chose==2)
         {
             start_t = clock();
             Selection_sort(arr,arr_size);
+            end_t = clock();
+            break;
         }
-        if(chose==3)
+        else if(chose==3)
         {
             start_t = clock();
             Bubble_sort(arr,arr_size);
+            end_t = clock();
+            break;
         }
-        if(chose==4)
+        else if(chose==4)
         {
             start_t = clock();
             Mergesort(arr,0,arr_size-1);
+            end_t = clock();
+            break;
         }
-        if(chose==5)
+        else if(chose==5)
         {
             start_t = clock();
             Quicksort(arr,0,arr_size-1);
+            end_t = clock();
+            break;
         }
-        if(chose==6)
+        else if(chose==6)
         {
             start_t = clock();
             Heap_sort(arr,arr_size);
+            end_t = clock();
+            break;
+        }
+        else
+        {
+            printf("Please enter again.\n");
+            scanf("%d",&chose);
         }
     }
-    while(chose<0&&chose>6);
 
     end_t = clock();
 
